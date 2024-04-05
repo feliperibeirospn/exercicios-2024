@@ -59,7 +59,7 @@
   </div>
   <h2 class="bg-rosa">Discussões</h2>
   <div class="discursao">
-    <div class="discursao-container">
+    <div class="discursao-container" *ngIf="mostrarPrimeiroContainer">
       <h2 class="orange">Compartilhe suas ideias ou dúvidas com os autores!</h2>
       <div>
         <img src="/assets/img/icon1.svg" alt="">
@@ -72,6 +72,14 @@
         <p>{{ informacaoExibida }}</p>
       </div>
       <button (click)="toggleInformacao()" class="btn-orange">Criar tópico</button>
+    </div>
+
+    <div class="discursao-container" *ngIf="!mostrarPrimeiroContainer">
+      <label for="">Assunto</label>
+      <input type="text">
+      <label for="">Conteúdo</label>
+      <textarea rows="5" cols="30" formControlName="text"> </textarea>
+      <button class="btn-orange">Enviar</button>
     </div>
     <div class="perguntas lines">
       <div>

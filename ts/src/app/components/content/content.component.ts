@@ -7,15 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent{
   informacaoExibida: string = "Informações iniciais";
-  mostrarInformacoes: boolean = false;
+  mostrarPrimeiroContainer: boolean = true;
+  mostrarInformacoes: boolean = false; // Adiciona essa linha
 
   toggleInformacao() {
-    this.mostrarInformacoes = !this.mostrarInformacoes;
-    if (!this.mostrarInformacoes) {
-      this.informacaoExibida = "Informações iniciais";
-    } else {
-      this.informacaoExibida = "Novas informações";
-    }
+    this.mostrarPrimeiroContainer = !this.mostrarPrimeiroContainer;
   }
-
 }
