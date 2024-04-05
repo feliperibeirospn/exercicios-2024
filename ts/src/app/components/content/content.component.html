@@ -4,7 +4,7 @@
       <div>
         <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de
           Campinas/SP </h2>
-        <div><img src="/assets/img/Flyer.png" alt="" width="783px" height="438px"></div>
+        <div><img src="/assets/img/Flyer.png" alt=""></div>
       </div>
       </div>
 
@@ -12,9 +12,9 @@
     <div class="container-2">
 
         <div>
-          <button id="download"> <img src="/assets/img/downloadbtn.svg" alt="" > Download</button>
-          <button><img src="/assets/img/star.svg" alt=""></button>
-          <button><img src="/assets/img/doi.svg" alt=""></button>
+          <button id="download" class="btn-orange"> <img src="/assets/img/downloadbtn.svg" alt="" > Download</button>
+          <button class="btn-orange"><img src="/assets/img/star.svg" alt=""></button>
+          <button class="btn-orange"><img src="/assets/img/doi.svg" alt=""></button>
         </div>
          <h3>COMO CITAR ESSE TRABALHO?</h3>
          <div class="detalhes">
@@ -57,20 +57,25 @@
       condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac
       gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... <span id="vermais">Ver mais</span></p>
   </div>
-  <div class="discursao lines">
-    <h2 class="bg-rosa">Discussões</h2>
-    <div>
-      <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
-      <img src="/assets/img/icon1.svg" alt="">
-      <img src="/assets/img/icon2.svg" alt="">
-      <img src="/assets/img/icon3.svg" alt="">
+  <h2 class="bg-rosa">Discussões</h2>
+  <div class="discursao">
+    <div class="discursao-container">
+      <h2 class="orange">Compartilhe suas ideias ou dúvidas com os autores!</h2>
+      <div>
+        <img src="/assets/img/icon1.svg" alt="">
+        <img src="/assets/img/icon2.svg" alt="">
+        <img src="/assets/img/icon3.svg" alt="">
+      </div>
       <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos
         ou sugestões para o autor!</p>
-      <button>Criar tópico</button>
+      <div *ngIf="mostrarInformacoes">
+        <p>{{ informacaoExibida }}</p>
+      </div>
+      <button (click)="toggleInformacao()" class="btn-orange">Criar tópico</button>
     </div>
-    <div>
+    <div class="perguntas lines">
       <div>
-        <h3>Assunto da pergunta aparece aqui</h3>
+        <h3 class="orange">Assunto da pergunta aparece aqui</h3>
         <p>Carlos Henrique Santos</p>
       </div>
       <div>
@@ -78,10 +83,10 @@
           <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
             processo formativo situado impacto de processo formativo processo...</p>
         </div>
-        <div>
+        <div class="more-like" >
           <img src="/assets/img/moreinfo.svg" alt="">
-          <button><img src="/assets/img/heart.svg" alt=""></button>
-          <p>1 like</p>
+          <button class="btn-orange"><img src="/assets/img/heart.svg" alt=""></button>
+          <p >1 like</p>
           <p>1 resposta</p>
         </div>
 

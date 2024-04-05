@@ -2,7 +2,11 @@
 .app-container {
   display: flex;
   flex-direction: row;
-  height: 100vh; /* ou a altura desejada */
+
+  .app-side-bar{
+    width: 30%;
+  }
+
 }
 
 .content-container {
@@ -13,5 +17,6 @@
 
 .main-content {
   flex: 1;
-  margin: 40px;
+  margin: 5%;
+
 }

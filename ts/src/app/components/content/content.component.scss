@@ -4,10 +4,13 @@
     display: flex;
     width: fit-content;
     align-items: center; /* Centraliza os elementos horizontalmente */
-
     .container-1 {
       display: flex;
+      width: 100%;
 
+      img{
+        width: 100%;
+      }
       h2 {
         margin: 10px 0;
         font-weight: 700;
@@ -22,28 +25,13 @@
     }
 
     .container-2 {
-      margin-left: 30px;
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 50%;
+
       align-items: end;
 
-      button {
-        background-color: #ed7839;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 5px 15px;
-        margin: 10px 0;
-        margin-left: 5px;
-        cursor: pointer;
 
-        transition: background-color 0.3s ease, color 0.3s ease;
-
-        &:hover {
-          background-color: #ed7839d1;
-        }
-      }
     }
 
     h3 {
@@ -58,7 +46,6 @@
 
     .detalhes {
       height: 440px;
-      width: 250px;
       font-family: Quicksand;
       font-size: 12px;
       font-weight: 400;
@@ -81,6 +68,7 @@
   }
   .bg-rosa {
     height: 45px;
+    padding: 20px;
     display: flex;
     align-items: center;
     background: #fdf1eb;
@@ -88,14 +76,69 @@
     font-size: 20px;
     border: 1px solid #ececec;
     border-radius: 3px;
-    color: #4e4e4e;}
+    color: #4e4e4e;
+  }
   .lines{
     border: 2px solid #ececec;
   }
-  #vermais{
+  .btn-orange{
+    background-color: #ed7839;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin: 10px 0;
+    margin-left: 5px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #ed7839d1;
+    }
+  }
+  #vermais, .orange{
     color: #ed7839;
   }
   .resumo{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Quicksand;
+
+    p{
+      padding: 15px;
+    }
+  }
+  .discursao{
+    border: 2px solid #ececec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .discursao-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+
+      img{
+        margin: 20px;
+      }
+    }
+    div{
+      padding: 15px;
+    }
+    .perguntas{
+      margin: 30px;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+    .more-like{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #4e4e4e;
+    }
   }
 }
 

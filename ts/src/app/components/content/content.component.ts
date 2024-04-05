@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent{
+  informacaoExibida: string = "Informações iniciais";
+  mostrarInformacoes: boolean = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggleInformacao() {
+    this.mostrarInformacoes = !this.mostrarInformacoes;
+    if (!this.mostrarInformacoes) {
+      this.informacaoExibida = "Informações iniciais";
+    } else {
+      this.informacaoExibida = "Novas informações";
+    }
   }
 
 }
