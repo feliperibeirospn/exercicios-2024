@@ -49,14 +49,19 @@
   </div>
   <div class="resumo lines">
     <h2 class="bg-rosa">Resumo</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo
-      turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies
-      gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra
-      lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus.
-      Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo
-      condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac
-      gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... <span id="vermais">Ver mais</span></p>
+    <p *ngIf="!isExpandido">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae omnis quod deserunt perferendis voluptatum temporibus enim aliquid, eligendi, suscipit iste quia illum numquam dolores officiis similique praesentium? Fuga, dolor?<span class="orange" (click)="toggleExpandido()">Ver mais</span>
+    </p>
+    <p *ngIf="isExpandido">
+     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint labore eos magni cumque dolore sit tempora quaerat provident nihil tempore voluptatum ullam accusamus, maiores consequatur cupiditate facilis iste modi? Enim.
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate itaque temporibus. Doloribus commodi perferendis obcaecati dignissimos quidem totam nostrum, voluptates fuga quaerat dicta distinctio debitis? Consectetur quos dolorum assumenda.
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quam debitis provident dignissimos nemo ex et officia fugit odio aut, id officiis, qui repellendus in voluptatum amet dicta commodi ab?
+     <span class="orange" (click)="toggleExpandido()">Ver Menos</span>
+    </p>
+
   </div>
+
+
   <h2 class="bg-rosa">Discussões</h2>
   <div class="discursao">
     <div class="discursao-container" *ngIf="mostrarPrimeiroContainer">
@@ -74,33 +79,32 @@
       <button (click)="toggleInformacao()" class="btn-orange">Criar tópico</button>
     </div>
 
-    <div class="discursao-container" *ngIf="!mostrarPrimeiroContainer">
-      <label for="">Assunto</label>
-      <input type="text">
-      <label for="">Conteúdo</label>
+    <div class="discursao-container-2" *ngIf="!mostrarPrimeiroContainer">
+      <p class="texto-center">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+    <div class="novo-assunto">
+      <label for="" class="orange">Assunto</label>
+      <input type="text" placeholder="Defina um tópico sucinto para notificar os autores...">
+      <label for="" class="orange">Conteúdo</label>
       <textarea rows="5" cols="30" formControlName="text"> </textarea>
-      <button class="btn-orange">Enviar</button>
+        <div class="div-btn"><button class="btn-orange enviar">Enviar</button></div>
     </div>
-    <div class="perguntas lines">
+    </div>
+    <div class="perguntas lines" *ngFor="let pergunta of perguntas">
       <div>
-        <h3 class="orange">Assunto da pergunta aparece aqui</h3>
-        <p>Carlos Henrique Santos</p>
+        <h3 class="orange">{{ pergunta.assunto }}</h3>
+        <p>{{ pergunta.autor }}</p>
       </div>
       <div>
         <div>
-          <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
-            processo formativo situado impacto de processo formativo processo...</p>
+          <p>{{ pergunta.conteudo }}</p>
         </div>
-        <div class="more-like" >
+        <div class="more-like">
           <img src="/assets/img/moreinfo.svg" alt="">
           <button class="btn-orange"><img src="/assets/img/heart.svg" alt=""></button>
-          <p >1 like</p>
-          <p>1 resposta</p>
+          <p>{{ pergunta.likes }} like(s)</p>
+          <p>{{ pergunta.respostas }} resposta(s)</p>
         </div>
-
       </div>
-
     </div>
-    <div></div>
   </div>
 </div>
