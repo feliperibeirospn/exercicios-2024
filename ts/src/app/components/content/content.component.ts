@@ -19,13 +19,6 @@ export class ContentComponent{
       likes: 5,
       respostas: 2
     },
-    {
-      assunto: 'Assunto da pergunta 2',
-      autor: 'Autor 2',
-      conteudo: 'Conteúdo da pergunta 2',
-      likes: 3,
-      respostas: 1
-    },
     // Adicione mais perguntas conforme necessário
   ];
 
@@ -36,7 +29,9 @@ export class ContentComponent{
     this.isExpandido = !this.isExpandido;
   }
 
-
+  expandirTopico(pergunta: any) {
+    pergunta.expandido = !pergunta.expandido;
+  }
 
 
 }

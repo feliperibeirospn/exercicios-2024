@@ -50,13 +50,13 @@
   <div class="resumo lines">
     <h2 class="bg-rosa">Resumo</h2>
     <p *ngIf="!isExpandido">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae omnis quod deserunt perferendis voluptatum temporibus enim aliquid, eligendi, suscipit iste quia illum numquam dolores officiis similique praesentium? Fuga, dolor?<button class="btn-show-more" (click)="toggleExpandido()">ver mais</button>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae omnis quod deserunt perferendis voluptatum temporibus enim aliquid, eligendi, suscipit iste quia illum numquam dolores officiis similique praesentium? Fuga, dolor?<span class="btn-show-more" (click)="toggleExpandido()">ver mais</span>
     </p>
     <p *ngIf="isExpandido">
      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint labore eos magni cumque dolore sit tempora quaerat provident nihil tempore voluptatum ullam accusamus, maiores consequatur cupiditate facilis iste modi? Enim.
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate itaque temporibus. Doloribus commodi perferendis obcaecati dignissimos quidem totam nostrum, voluptates fuga quaerat dicta distinctio debitis? Consectetur quos dolorum assumenda.
      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quam debitis provident dignissimos nemo ex et officia fugit odio aut, id officiis, qui repellendus in voluptatum amet dicta commodi ab?
-     <span class="orange" (click)="toggleExpandido()">Ver Menos</span>
+     <span class="btn-show-more" (click)="toggleExpandido()">Ver Menos</span>
     </p>
 
   </div>
@@ -77,21 +77,26 @@
         <p>{{ informacaoExibida }}</p>
       </div>
       <button (click)="toggleInformacao()" class="btn-create-topic">criar tópico</button>
+      <div class="mensagem-sucesso">Aguardando feedback dos autores</div>
     </div>
 
     <div class="discursao-container-2" *ngIf="!mostrarPrimeiroContainer">
       <p class="texto-center">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
-    <div class="novo-assunto">
-      <label for="" class="orange">Assunto</label>
-      <input type="text" placeholder="Defina um tópico sucinto para notificar os autores...">
-      <label for="" class="orange">Conteúdo</label>
-      <textarea rows="5" cols="30" formControlName="text"> </textarea>
-        <div class="div-btn"><button class="btn-orange enviar">Enviar</button></div>
+      <div class="novo-assunto">
+        <form>
+          <label for="assunto" class="orange">Assunto</label>
+          <input type="text" id="assunto" class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
+          <label for="conteudo" class="orange">Conteúdo</label>
+          <textarea id="conteudo" rows="5" cols="30" formControlName="text"> </textarea>
+          <div class="div-btn">
+            <button type="submit" class="enviar">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
-    </div>
-    <div class="perguntas lines" *ngFor="let pergunta of perguntas">
+    <div class="answered-topic" *ngFor="let pergunta of perguntas">
       <div>
-        <h3 class="orange">{{ pergunta.assunto }}</h3>
+        <h3 class="orange ops-topic-subject" (click)="expandirTopico(pergunta)">{{ pergunta.assunto }}</h3>
         <p>{{ pergunta.autor }}</p>
       </div>
       <div>
@@ -105,6 +110,10 @@
           <p>{{ pergunta.respostas }} resposta(s)</p>
         </div>
       </div>
+      <div class="comments-container" *ngIf="pergunta.expandido">
+        <!-- Aqui vai o conteúdo dos comentários -->
+      </div>
     </div>
   </div>
+
 </div>
