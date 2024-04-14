@@ -97,11 +97,22 @@
       background-color: #ed7839d1;
     }
   }
+  .orange,.ops-topic-subject{
+    color: #ed7839;
+  }
   #vermais, .btn-show-more{
     color: #ed7839;
-  
+
     cursor: pointer;
     display: block; }
+    .btn-orange,.enviar{
+      background-color: #ed7839;
+      cursor: pointer;
+      padding: 5px;
+      gap: 2px;
+      border: 1px solid #ececec;
+      color: #EAF1F2;
+    }
   .resumo{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -133,11 +144,32 @@
     div{
       padding: 15px;
     }
-    .answered-topic{
+    .mensagem-sucesso{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 20vh;
+      background-color:#DDDDDD;
+    }
+    .answered-topic {
+
       margin: 30px;
       box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
       border-radius: 3px;
       width: 90%;
+      display: flex;
+      flex-direction: column;
+
+
+      .comments-container {
+        width: fit-content;
+        background-color: #E7E7E7;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
     .more-like{
       display: flex;
@@ -176,7 +208,6 @@
           text-align: center;
 
         }
-
 
       }
     }

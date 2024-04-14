@@ -77,7 +77,6 @@
         <p>{{ informacaoExibida }}</p>
       </div>
       <button (click)="toggleInformacao()" class="btn-create-topic">criar tópico</button>
-      <div class="mensagem-sucesso">Aguardando feedback dos autores</div>
     </div>
 
     <div class="discursao-container-2" *ngIf="!mostrarPrimeiroContainer">
@@ -89,14 +88,21 @@
           <label for="conteudo" class="orange">Conteúdo</label>
           <textarea id="conteudo" rows="5" cols="30" formControlName="text"> </textarea>
           <div class="div-btn">
-            <button type="submit" class="enviar">Enviar</button>
+            <button type="submit" class="enviar" (click)="enviarFormulario($event)">Enviar</button>
           </div>
+          <div class="mensagem-sucesso"><div>
+            <p>Aguardando feedback dos autores</p>
+          </div>
+          <div>
+            <span class="orange">editar tópico</span>
+          </div>
+        </div>
         </form>
       </div>
     </div>
-    <div class="answered-topic" *ngFor="let pergunta of perguntas">
+    <div class="answered-topic"(click)="expandirTopico(pergunta)" *ngFor="let pergunta of perguntas">
       <div>
-        <h3 class="orange ops-topic-subject" (click)="expandirTopico(pergunta)">{{ pergunta.assunto }}</h3>
+        <h3 class="ops-topic-subject">{{ pergunta.assunto }}</h3>
         <p>{{ pergunta.autor }}</p>
       </div>
       <div>
@@ -104,15 +110,21 @@
           <p>{{ pergunta.conteudo }}</p>
         </div>
         <div class="more-like">
-          <img src="/assets/img/moreinfo.svg" alt="">
+          <button><img src="/assets/img/moreinfo.svg" alt=""></button>
           <button class="btn-orange"><img src="/assets/img/heart.svg" alt=""></button>
           <p>{{ pergunta.likes }} like(s)</p>
-          <p>{{ pergunta.respostas }} resposta(s)</p>
+          <p >{{ pergunta.respostas }} resposta(s)</p>
+        </div>
+        <div class="comments-container"  *ngIf="pergunta.expandido">
+          <ul>
+            <li>
+              <p><strong>{{ pergunta.coautor }}</strong></p>
+              <p>{{ pergunta.comentario }}</p>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="comments-container" *ngIf="pergunta.expandido">
-        <!-- Aqui vai o conteúdo dos comentários -->
-      </div>
+
     </div>
   </div>
 
