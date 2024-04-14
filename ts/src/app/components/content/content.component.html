@@ -50,7 +50,7 @@
   <div class="resumo lines">
     <h2 class="bg-rosa">Resumo</h2>
     <p *ngIf="!isExpandido">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae omnis quod deserunt perferendis voluptatum temporibus enim aliquid, eligendi, suscipit iste quia illum numquam dolores officiis similique praesentium? Fuga, dolor?<span class="orange" (click)="toggleExpandido()">Ver mais</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae omnis quod deserunt perferendis voluptatum temporibus enim aliquid, eligendi, suscipit iste quia illum numquam dolores officiis similique praesentium? Fuga, dolor?<button class="btn-show-more" (click)="toggleExpandido()">ver mais</button>
     </p>
     <p *ngIf="isExpandido">
      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint labore eos magni cumque dolore sit tempora quaerat provident nihil tempore voluptatum ullam accusamus, maiores consequatur cupiditate facilis iste modi? Enim.
@@ -76,7 +76,7 @@
       <div *ngIf="mostrarInformacoes">
         <p>{{ informacaoExibida }}</p>
       </div>
-      <button (click)="toggleInformacao()" class="btn-orange">Criar tópico</button>
+      <button (click)="toggleInformacao()" class="btn-create-topic">criar tópico</button>
     </div>
 
     <div class="discursao-container-2" *ngIf="!mostrarPrimeiroContainer">
