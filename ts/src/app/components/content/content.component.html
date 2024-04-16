@@ -2,105 +2,160 @@
   <div class="top-container">
     <div class="container-1">
       <div>
-        <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de
-          Campinas/SP </h2>
-        <div><img src="/assets/img/Flyer.png" alt=""></div>
+        <h2>
+          Análise sensorial de preparações funcionais desenvolvidas para
+          escolares entre 09 e 15 anos, do município de Campinas/SP
+        </h2>
+        <div><img src="/assets/img/Flyer.png" alt="" /></div>
       </div>
-      </div>
-
+    </div>
 
     <div class="container-2">
-
+      <div>
+        <button id="download" class="btn-orange">
+          <img src="/assets/img/downloadbtn.svg" alt="" /> Download
+        </button>
+        <button class="btn-orange">
+          <img src="/assets/img/star.svg" alt="" />
+        </button>
+        <button class="btn-orange">
+          <img src="/assets/img/doi.svg" alt="" />
+        </button>
+      </div>
+      <h3>COMO CITAR ESSE TRABALHO?</h3>
+      <div class="detalhes">
         <div>
-          <button id="download" class="btn-orange"> <img src="/assets/img/downloadbtn.svg" alt="" > Download</button>
-          <button class="btn-orange"><img src="/assets/img/star.svg" alt=""></button>
-          <button class="btn-orange"><img src="/assets/img/doi.svg" alt=""></button>
-        </div>
-         <h3>COMO CITAR ESSE TRABALHO?</h3>
-         <div class="detalhes">
+          <h2 class="bg-rosa">Detalhes</h2>
+          <div class="containers">
+            <div>
+              <p>Tipo de Apresentação:<span>Pôster</span></p>
+              <p>Eixo temático: <span>Alimentação e saúde (AS)</span></p>
+              <p>
+                Palavras-chave:
+                <span>Alimentos funcionais, alimentação escolar.</span>
+              </p>
+            </div>
 
-          <div>
-            <h2 class="bg-rosa">Detalhes</h2>
-            <p>Tipo de Apresentação:<span>Pôster</span> </p>
-            <p>Eixo temático: <span>Alimentação e saúde (AS)</span></p>
-            <p>Palavras-chave: <span>Alimentos funcionais, alimentação escolar.</span></p>
+            <div>
+              <p><strong>Autores:</strong></p>
+              <ul style="list-style: none; padding: 0; margin: 0">
+                <li>Galileo Galilei<sup>1</sup></li>
+                <li>Berta Lange de Morretes<sup>2</sup></li>
+                <li>Isaac Newton<sup>3</sup></li>
+                <li>Cesar Lattes<sup>1</sup></li>
+                <li>Stephen Hawking<sup>4</sup></li>
+              </ul>
+            </div>
 
-            <p><strong>Autores:</strong></p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li>Galileo Galilei<sup>1</sup></li>
-              <li>Berta Lange de Morretes<sup>2</sup></li>
-              <li>Isaac Newton<sup>3</sup></li>
-              <li>Cesar Lattes<sup>1</sup></li>
-              <li>Stephen Hawking<sup>4</sup></li>
-            </ul>
-
-            <p>Universidades:</p>
-            <ul style="list-style: none; padding: 0; margin: 0;color:#ADA0A0;">
-              <li><sup>1</sup>Universidade Estadual de Campinas</li>
-              <li><sup>2</sup>Universidade de São Paulo</li>
-              <li><sup>3</sup>Instituto Nacional de Pesquisas Espaciais</li>
-              <li><sup>4</sup>Universidade Federal do Rio de Janeiro</li>
-            </ul>
+            <div>
+              <ul
+                style="list-style: none; padding: 0; margin: 0; color: #ada0a0"
+              >
+                <li><sup>1</sup>Universidade Estadual de Campinas</li>
+                <li><sup>2</sup>Universidade de São Paulo</li>
+                <li><sup>3</sup>Instituto Nacional de Pesquisas Espaciais</li>
+                <li><sup>4</sup>Universidade Federal do Rio de Janeiro</li>
+              </ul>
+            </div>
           </div>
-
-
+        </div>
       </div>
     </div>
   </div>
   <div class="resumo lines">
     <h2 class="bg-rosa">Resumo</h2>
     <p *ngIf="!isExpandido">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae omnis quod deserunt perferendis voluptatum temporibus enim aliquid, eligendi, suscipit iste quia illum numquam dolores officiis similique praesentium? Fuga, dolor?<span class="btn-show-more" (click)="toggleExpandido()">ver mais</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae
+      omnis quod deserunt perferendis voluptatum temporibus enim aliquid,
+      eligendi, suscipit iste quia illum numquam dolores officiis similique
+      praesentium? Fuga, dolor?<span
+        class="btn-show-more"
+        (click)="toggleExpandido()"
+        >ver mais</span
+      >
     </p>
     <p *ngIf="isExpandido">
-     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint labore eos magni cumque dolore sit tempora quaerat provident nihil tempore voluptatum ullam accusamus, maiores consequatur cupiditate facilis iste modi? Enim.
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cupiditate itaque temporibus. Doloribus commodi perferendis obcaecati dignissimos quidem totam nostrum, voluptates fuga quaerat dicta distinctio debitis? Consectetur quos dolorum assumenda.
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quam debitis provident dignissimos nemo ex et officia fugit odio aut, id officiis, qui repellendus in voluptatum amet dicta commodi ab?
-     <span class="btn-show-more" (click)="toggleExpandido()">Ver Menos</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint labore eos
+      magni cumque dolore sit tempora quaerat provident nihil tempore voluptatum
+      ullam accusamus, maiores consequatur cupiditate facilis iste modi? Enim.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+      cupiditate itaque temporibus. Doloribus commodi perferendis obcaecati
+      dignissimos quidem totam nostrum, voluptates fuga quaerat dicta distinctio
+      debitis? Consectetur quos dolorum assumenda. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Unde quam debitis provident dignissimos nemo
+      ex et officia fugit odio aut, id officiis, qui repellendus in voluptatum
+      amet dicta commodi ab?
+      <span class="btn-show-more" (click)="toggleExpandido()">Ver Menos</span>
     </p>
-
   </div>
-
 
   <h2 class="bg-rosa">Discussões</h2>
   <div class="discursao">
     <div class="discursao-container" *ngIf="mostrarPrimeiroContainer">
       <h2 class="orange">Compartilhe suas ideias ou dúvidas com os autores!</h2>
       <div>
-        <img src="/assets/img/icon1.svg" alt="">
-        <img src="/assets/img/icon2.svg" alt="">
-        <img src="/assets/img/icon3.svg" alt="">
+        <img src="/assets/img/icon1.svg" alt="" />
+        <img src="/assets/img/icon2.svg" alt="" />
+        <img src="/assets/img/icon3.svg" alt="" />
       </div>
-      <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos
-        ou sugestões para o autor!</p>
+      <p>
+        Sabia que o maior estímulo no desenvolvimento científico e cultural é a
+        curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+      </p>
       <div *ngIf="mostrarInformacoes">
         <p>{{ informacaoExibida }}</p>
       </div>
-      <button (click)="toggleInformacao()" class="btn-create-topic">criar tópico</button>
+      <button (click)="toggleInformacao()" class="btn-create-topic">
+        + criar tópico
+      </button>
     </div>
 
-    <div class="discursao-container-2" *ngIf="!mostrarPrimeiroContainer">
-      <p class="texto-center">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+    <div class="discursao-container-2" *ngIf="mostrarSegundoContainer">
+      <p class="texto-center">
+        Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+      </p>
       <div class="novo-assunto">
         <form>
           <label for="assunto" class="orange">Assunto</label>
-          <input type="text" id="assunto" class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
+          <input
+            type="text"
+            id="assunto"
+            class="subject"
+            placeholder="Defina um tópico sucinto para notificar os autores..."
+          />
           <label for="conteudo" class="orange">Conteúdo</label>
-          <textarea id="conteudo" rows="5" cols="30" formControlName="text"> </textarea>
+          <textarea id="conteudo" rows="5" cols="30" formControlName="text">
+          </textarea>
           <div class="div-btn">
-            <button type="submit" class="enviar" (click)="enviarFormulario($event)">Enviar</button>
+            <button
+              type="submit"
+              class="enviar"
+              (click)="enviarFormulario($event)"
+            >
+              Enviar
+            </button>
           </div>
-          <div class="mensagem-sucesso"><div>
-            <p>Aguardando feedback dos autores</p>
-          </div>
-          <div>
-            <span class="orange">editar tópico</span>
-          </div>
-        </div>
         </form>
       </div>
     </div>
-    <div class="answered-topic"(click)="expandirTopico(pergunta)" *ngFor="let pergunta of perguntas">
+    <div class="mensagem-sucesso" *ngIf="mensagemsucesso">
+      <h2 class="orange">Seu tópico foi enviado com sucesso! :D</h2>
+      <p>
+        Agradecemos por sua contribuição, uma notificação será enviada ao seu
+        email assim que seu tópico for respondido!
+      </p>
+      <p class="orange">Descubra outros trabalhos!</p>
+      <button class="btn-create-topic">criar novo tópico</button>
+
+      <img src="assets\img\menssucesso.svg" alt="" />
+      <p>Aguardando feedback dos autores</p>
+      <span class="orange">editar tópico</span>
+    </div>
+    <div
+      class="answered-topic"
+      (click)="expandirTopico(pergunta)"
+      *ngFor="let pergunta of perguntas"
+    >
       <div>
         <h3 class="ops-topic-subject">{{ pergunta.assunto }}</h3>
         <p>{{ pergunta.autor }}</p>
@@ -110,22 +165,29 @@
           <p>{{ pergunta.conteudo }}</p>
         </div>
         <div class="more-like">
-          <button><img src="/assets/img/moreinfo.svg" alt=""></button>
-          <button class="btn-orange"><img src="/assets/img/heart.svg" alt=""></button>
+          <button>
+            <img src="/assets/img/moreinfo.svg" alt="" class="moreinfo" />
+          </button>
+          <button class="btn-orange">
+            <img src="/assets/img/heart.svg" alt="" />
+          </button>
           <p>{{ pergunta.likes }} like(s)</p>
-          <p >{{ pergunta.respostas }} resposta(s)</p>
+          <p>{{ pergunta.respostas }} resposta(s)</p>
         </div>
-        <div class="comments-container"  *ngIf="pergunta.expandido">
-          <ul>
-            <li>
-              <p><strong>{{ pergunta.coautor }}</strong></p>
-              <p>{{ pergunta.comentario }}</p>
-            </li>
-          </ul>
+        <div class="comments-container" *ngIf="pergunta.expandido">
+          <div>
+            <div>
+              <strong>{{ pergunta.coautor }}</strong>
+            </div>
+
+            <div>
+              <p>autor</p>
+              <img src="assets\img\cautor.svg" alt="" />
+            </div>
+          </div>
+          <p>{{ pergunta.comentario }}</p>
         </div>
       </div>
-
     </div>
   </div>
-
 </div>

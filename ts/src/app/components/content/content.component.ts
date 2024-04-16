@@ -17,8 +17,10 @@ export class ContentComponent{
   @ViewChild('formRef') formRef!: NgForm;
   informacaoExibida: string = "Informações iniciais";
   mostrarPrimeiroContainer: boolean = true;
+  mostrarSegundoContainer: boolean = false;
   mostrarInformacoes: boolean = false; // Adiciona essa linha
   isExpandido: boolean = false;
+  mensagemsucesso:boolean = false;
   expandido: boolean = false;
   perguntas: any[] = [
     {
@@ -29,6 +31,7 @@ export class ContentComponent{
       respostas: 2,
       coautor:'Carlos Henrique Santos',
       comentario:'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+
     },
 
     // Adicione mais perguntas conforme necessário
@@ -36,6 +39,7 @@ export class ContentComponent{
 
   toggleInformacao() {
     this.mostrarPrimeiroContainer = !this.mostrarPrimeiroContainer;
+    this.mostrarSegundoContainer =!this.mostrarSegundoContainer;
   }
   toggleExpandido() {
     this.isExpandido = !this.isExpandido;
@@ -69,9 +73,9 @@ export class ContentComponent{
     if (event) {
       event.preventDefault(); // Evitar o comportamento padrão de submissão do formulário
     }
-
+    this.mostrarSegundoContainer =!this.mostrarSegundoContainer;
     // Adicione aqui o código que você deseja executar quando o botão for clicado
-    console.log('Botão de envio clicado!');
+    this.mensagemsucesso = true;
 
     // Esperar 4000ms (4 segundos) antes de recarregar a página
     setTimeout(function () {

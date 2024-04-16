@@ -21,4 +21,33 @@
 
 
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+
+  .menu-lateral{
+    margin-top: 10px; /* Espaçamento acima de cada parágrafo */
+    margin-bottom: 10px; /* Espaçamento abaixo de cada parágrafo */
+    position: relative;
+    p{
+      margin-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-family: Quicksand;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18.75px;
+      text-align: left;
+      color:#725C5C;
+      ;
+
+
+    }
+    .select{
+
+      justify-content: center;
+      margin: 0;
+      background-color: #FDF1EB;
+      text-align: left;
+
+
+    }
+  }
 }
